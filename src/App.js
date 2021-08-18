@@ -15,7 +15,7 @@ class App extends Component {
       <div className="App">
         <h1>CatBook</h1>
         {/* add CatList component here */}
-        <CatList catPics={this.props.cats} />
+        {this.props.loading ? <span>Loading</span> : <CatList catPics={this.props.cats} />}
       </div>
     );
   }
